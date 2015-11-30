@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 12:53:03 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 11:30:26 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/25 14:07:59 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 12:53:03 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	int i;
+	size_t	cpt;
+	char	*ptr_dst;
+	char	*ptr_src;
 
-	i = 0;
-	while (s[i])
+	ptr_dst = (char *)dst;
+	ptr_src = (char *)src;
+	cpt = 0;
+	while (cpt < n)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		if (ptr_src[cpt] == c)
+			return (ptr_dst + cpt + 1);
+		else
+		{
+			ptr_dst[cpt] = ptr_src[cpt];
+			cpt++;
+		}
 	}
+	return (NULL);
 }

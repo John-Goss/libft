@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 12:53:03 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 11:30:26 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 11:59:18 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	int i;
+	size_t	i;
+	int		src_len;
 
 	i = 0;
-	while (s[i])
+	src_len = ft_strlen(src);
+	while (src[i] && i < n)
 	{
-		ft_putchar_fd(s[i], fd);
+		dst[i] = src[i];
 		i++;
 	}
+	if (n > src_len)
+	{
+		while (dst[i])
+		{
+			dst[i] = '\0';
+			i++;
+		}
+	}
+	return (dst);
 }
