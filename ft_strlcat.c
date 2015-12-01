@@ -14,20 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int i;
-	int j;
-	size_t dst_len;
+	size_t	i;
+	size_t	dst_len;
 
-	dst_len = ft_strlen(dst);
 	i = 0;
-	j = dst_len;
-	dst = (char *)malloc(sizeof((size_t)size + dst_len));
-	while (src[i])
+	while (dst[i] && i < size)
 	{
-		dst[j] = src[i];
 		i++;
-		j++;
+		dst_len = i;
 	}
-	dst[j] = '\0';
-	return (size + dst_len);
+	while (src[i - dst_len] && i < size - 1)
+	{
+		dst[i] = src[i - dst_len];
+		i++;
+	}
+	if (dst_len < size)
+		dst[i] = '\0';
+	return (dst_len + ft_strlen(src));
 }
