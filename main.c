@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:02:41 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 14:30:23 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/01 17:33:17 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,40 +123,40 @@ int					main(void)
 	D_ADD_HCTEST(memcpy);
 #define	D_MEMCCPY
 	D_ADD_HCTEST(memccpy);
-//#define	D_MEMMOVE
-//	D_ADD_HCTEST(memmove);
-//#define	D_MEMCHR
-//	D_ADD_HCTEST(memchr);
-//#define	D_MEMCMP
-//	D_ADD_HCTEST(memcmp);
+#define	D_MEMMOVE
+	D_ADD_HCTEST(memmove);
+#define	D_MEMCHR
+	D_ADD_HCTEST(memchr);
+#define	D_MEMCMP
+	D_ADD_HCTEST(memcmp);
 #define	D_STRLEN
 	D_ADD_TEST(strlen);
-//#define	D_STRDUP
-//	D_ADD_TEST(strdup);
+#define	D_STRDUP
+	D_ADD_TEST(strdup);
 #define	D_STRCPY
 	D_ADD_HCTEST(strcpy);
 #define	D_STRNCPY
 	D_ADD_HCTEST(strncpy);
 #define	D_STRCAT
 	D_ADD_TEST(strcat);
-//#define	D_STRNCAT
-//	D_ADD_TEST(strncat);
-//#define	D_STRLCAT
-//	D_ADD_TEST(strlcat);
-//#define	D_STRCHR
-//	D_ADD_TEST(strchr);
-//#define	D_STRRCHR
-//	D_ADD_TEST(strrchr);
-//#define	D_STRSTR
-//	D_ADD_TEST(strstr);
-//#define	D_STRNSTR
-//	D_ADD_TEST(strnstr);
+#define	D_STRNCAT
+	D_ADD_TEST(strncat);
+#define	D_STRLCAT
+	D_ADD_TEST(strlcat);
+#define	D_STRCHR
+	D_ADD_TEST(strchr);
+#define	D_STRRCHR
+	D_ADD_TEST(strrchr);
+#define	D_STRSTR
+	D_ADD_TEST(strstr);
+#define	D_STRNSTR
+	D_ADD_TEST(strnstr);
 #define	D_STRCMP
 	D_ADD_TEST(strcmp);
 #define	D_STRNCMP
 	D_ADD_TEST(strncmp);
-//#define	D_ATOI
-//	D_ADD_HCTEST(atoi);
+#define	D_ATOI
+	D_ADD_HCTEST(atoi);
 #define	D_ISALPHA
 	D_ADD_HCTEST(isalpha);
 #define	D_ISDIGIT
@@ -1298,11 +1298,11 @@ int				uf_test_strstr(void)
 #ifdef	D_STRRCHR
 int				uf_test_strrchr(void)
 {
-	char		str[] = "Hello je tesx";
+	char		str[] = "Hello je test";
 
-	if (strrchr(str, 'H') != ft_strrchr(str, 'H'))
+	if (strrchr(str, 'e') != ft_strrchr(str, 'e'))
 	{
-		printf("notre=%s\nvotre=%s\n", strrchr(str, 'H'), ft_strrchr(str, 'H'));
+		printf("notre=%s\nvotre=%s\n", strrchr(str, 'e'), ft_strrchr(str, 'e'));
 		D_ERROR
 	}
 	if (strrchr(str, 'j') != ft_strrchr(str, 'j'))

@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/30 15:14:26 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 15:53:03 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strstr(const char *s1, const char *s2)
 {
-	size_t	i;
-	int		src_len;
+	int i;
+	int j;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	j = 0;
+	if (s2[j] == '\0')
+		return ((char *)s1);
+	while (s1[i])
 	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
+		while (s1[i] == s2[j] && s2[j] != '\0')
 		{
-			dst[i] = '\0';
 			i++;
+			j++;
 		}
+		if (s2[j] == '\0')
+			return ((char *)&s1[i - j]);
+		i = (i - j + 1);
+		j = 0;
 	}
-	return (dst);
+	return (NULL);
 }

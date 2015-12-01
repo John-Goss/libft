@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/30 16:47:45 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 17:09:48 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	int		src_len;
+	size_t	cpt;
+	int		i;
+	int		j;
 
+	j = ft_strlen(s1);
 	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	cpt = 0;
+	while (s2[i] && cpt < n)
 	{
-		dst[i] = src[i];
+		((char *)s1)[j] = ((char *)s2)[i];
 		i++;
+		j++;
+		cpt++;
 	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
-		{
-			dst[i] = '\0';
-			i++;
-		}
-	}
-	return (dst);
+	return (s1);
 }

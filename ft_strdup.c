@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/30 18:53:07 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 19:10:51 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
-	int		src_len;
+	char	*new;
+	int		i;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	new = (char *)malloc(sizeof((const char *)s1) + 1);
+	if (new == NULL)
+		return (NULL);
+	while (((char *)s1)[i])
 	{
-		dst[i] = src[i];
+		new[i] = ((char *)s1)[i];
 		i++;
 	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
-		{
-			dst[i] = '\0';
-			i++;
-		}
-	}
-	return (dst);
+	new[i] = '\0';
+	return (new);
 }

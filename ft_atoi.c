@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/12/01 17:31:43 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/12/01 18:00:55 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
-	int		src_len;
+	int i;
+	int res;
 
+	res = 0;
 	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	while (str[i] != '+' || str[i] != '-' || str[i] < '0' || str[i] > '9')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		dst[i] = src[i];
+		i++;
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		if (str[i - 1] == '-')
+			write(1, "-", 1);
+	}
+	if (str[i] < '0' || str[i] > '9')
+		return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
-		{
-			dst[i] = '\0';
-			i++;
-		}
-	}
-	return (dst);
+	return (res);
 }

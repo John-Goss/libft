@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/30 17:45:13 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 19:11:12 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	int		src_len;
+	unsigned char	i;
+	size_t			cpt;
 
-	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	i = ((unsigned char)c);
+	cpt = 0;
+	if (s && n)
 	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
+		while (cpt < n)
 		{
-			dst[i] = '\0';
-			i++;
+			if (((unsigned char *)s)[cpt] == i)
+				return (((void *)s) + cpt);
+			cpt++;
 		}
 	}
-	return (dst);
+	return (NULL);
 }

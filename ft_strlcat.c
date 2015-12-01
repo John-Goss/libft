@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/12/01 13:15:12 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/12/01 14:10:41 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	int		src_len;
+	int i;
+	int j;
+	size_t dst_len;
 
+	dst_len = ft_strlen(dst);
 	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	j = dst_len;
+	dst = (char *)malloc(sizeof((size_t)size + dst_len));
+	while (src[i])
 	{
-		dst[i] = src[i];
+		dst[j] = src[i];
 		i++;
+		j++;
 	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
-		{
-			dst[i] = '\0';
-			i++;
-		}
-	}
-	return (dst);
+	dst[j] = '\0';
+	return (size + dst_len);
 }

@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/11/30 17:10:39 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/11/30 17:43:47 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	int		src_len;
+	size_t cpt;
 
-	i = 0;
-	src_len = ft_strlen(src);
-	while (src[i] && i < n)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (n > ((size_t)src_len))
-	{
-		while (dst[i])
+	cpt = 0;
+	if (src == dst)
+		return (dst);
+	else if (src < dst)
+		while (len > 0)
 		{
-			dst[i] = '\0';
-			i++;
+			((char *)dst)[len - 1] = ((char *)src)[len - 1];
+			len--;
 		}
-	}
+	else if (src > dst)
+		while (cpt < len)
+		{
+			((char *)dst)[cpt] = ((char *)src)[cpt];
+			cpt++;
+		}
 	return (dst);
 }
