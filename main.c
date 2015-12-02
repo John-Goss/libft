@@ -171,20 +171,20 @@ int					main(void)
 	D_ADD_HCTEST(toupper);
 #define	D_TOLOWER
 	D_ADD_HCTEST(tolower);
-//#define	D_MEMALLOC_AND_DEL
-//	D_ADD_TEST(memalloc_and_del);
-//#define	D_STRNEW
-//	D_ADD_TEST(strnew);
-//#define	D_STRDEL
-//	D_ADD_TEST(strdel);
-//#define	D_STRCLR
-//	D_ADD_TEST(strclr);
-//#define	D_STRITER
-//	D_ADD_TEST(striter);
-//#define	D_STRITERI
-//	D_ADD_TEST(striteri);
-//#define	D_STRMAP
-//	D_ADD_TEST(strmap);
+#define	D_MEMALLOC_AND_DEL
+	D_ADD_TEST(memalloc_and_del);
+#define	D_STRNEW
+	D_ADD_TEST(strnew);
+#define	D_STRDEL
+	D_ADD_TEST(strdel);
+#define	D_STRCLR
+	D_ADD_TEST(strclr);
+#define	D_STRITER
+	D_ADD_TEST(striter);
+#define	D_STRITERI
+	D_ADD_TEST(striteri);
+#define	D_STRMAP
+	D_ADD_TEST(strmap);
 //#define	D_STRMAPI
 //	D_ADD_TEST(strmapi);
 //#define	D_STREQU
