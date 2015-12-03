@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 18:53:07 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 19:10:51 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/03 16:54:23 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strdup(const char *s1)
 	new = (char *)malloc(sizeof((const char *)s1) + 1);
 	if (new == NULL)
 		return (NULL);
-	while (((char *)s1)[i])
+	while (s1[i])
 	{
-		new[i] = ((char *)s1)[i];
+		new[i] = s1[i];
 		i++;
 	}
 	new[i] = '\0';

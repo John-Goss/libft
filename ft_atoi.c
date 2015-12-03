@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 17:31:43 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/01 18:00:55 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/03 11:42:15 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,7 @@ int	ft_atoi(const char *str)
 			return (0);
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
+		res = res * 10 + str[i++] - '0';
 	if (is_neg == 1)
 		res = -res;
 	return (res);
