@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:22:27 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 19:50:25 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 14:52:44 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		cpt++;
 	if (cpt == n)
 		return (0);
-	return (s1[cpt] - s2[cpt]);
+	return ((unsigned char)s1[cpt] - (unsigned char)s2[cpt]);
 }

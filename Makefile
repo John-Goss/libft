@@ -6,16 +6,15 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2015/12/03 14:41:11 by jle-quer         ###   ########.fr        #
+#    Updated: 2015/12/04 13:57:28 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-RC_NAME = ft_atoi.c \
+SRC_NAME = ft_atoi.c \
 		  ft_bzero.c \
 		  ft_isalnum.c \
 		  ft_isalpha.c \
 		  ft_isascii.c \
-		  ft_isblank_sup.c \
 		  ft_isdigit.c \
 		  ft_isprint.c \
 		  ft_itoa.c \
@@ -63,17 +62,26 @@ RC_NAME = ft_atoi.c \
 		  ft_strtrim.c \
 		  ft_tolower.c \
 		  ft_toupper.c
+
 NAME = libft.a
+
 FLAGS = -Wall -Werror -Wextra
+
 OBJET = $(SRC_NAME:.c=.o)
-	all: $(NAME)
+
+all: $(NAME)
+
 $(NAME): $(OBJET)
-		ar rc $(NAME) $(OBJET)
-			ranlib $(NAME)
+	ar rc $(NAME) $(OBJET)
+	ranlib $(NAME)
+
 %.o: %.c
-		gcc $(FLAGS) -c $<
+	gcc $(FLAGS) -c $<
+
 clean:
-		rm -f $(OBJET)
+	rm -f $(OBJET)
+
 fclean: clean
-		rm -rf $(NAME)
+	rm -rf $(NAME)
+
 re: fclean all

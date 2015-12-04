@@ -6,25 +6,25 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:51:01 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 17:57:54 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
-	int		src_len;
+	size_t	src_len;
 
 	i = 0;
 	src_len = ft_strlen(src);
-	while (src[i] && i < n)
+	while (src[i] && i < len)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (n > ((size_t)src_len))
+	if (len > src_len)
 	{
 		while (dst[i])
 		{
