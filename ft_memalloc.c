@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 11:30:30 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 12:03:45 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 12:07:03 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *new;
+	void	*new;
 
-	new = (void *)malloc(sizeof((size_t)size));
+	new = (void *)malloc(sizeof(size_t) * size);
 	if (new == NULL)
 		return (NULL);
-	else
-		ft_memset(new, 0, size);
+	ft_memset(new, 0, size);
 	return (new);
 }

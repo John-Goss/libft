@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:02:41 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 15:41:21 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 12:23:50 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,10 +195,10 @@ int					main(void)
 	D_ADD_TEST(strsub);
 #define	D_STRJOIN
 	D_ADD_TEST(strjoin);
-//#define	D_STRSPLIT
-//	D_ADD_TEST(strsplit);
-//#define	D_ITOA
-//	D_ADD_TEST(itoa);
+#define	D_STRSPLIT
+	D_ADD_TEST(strsplit);
+#define	D_ITOA
+	D_ADD_TEST(itoa);
 #define	D_STRTRIM
 	D_ADD_TEST(strtrim);
 //#define	D_LSTNEW

@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 15:41:56 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 17:05:32 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/03 17:49:17 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,20 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int		i;
-	int		j;
-	int		len;
+	size_t	i;
+	size_t	len;
+	size_t	j;
 	char	*new;
 
 	i = 0;
-	j = 0;
-	len = ft_strlen(s) -1;
 	if (!s)
 		return (NULL);
-	while (s[i] == ' ' || s[i] == ',' || s[i] == '\n' || s[i] == '\t')
+	j = ft_strlen(s) - 1;
+	while (i <= j && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i++;
-	while (s[len] == ' ' || s[len] == ',' || s[len] == '\n' || s[len] == '\t')
-		len--;
-	new = (char *)malloc(sizeof(len - i + 2));
-	if (new == NULL)
-		return (NULL);
-	while (i <= len)
-	{
-		new[j] = s[i];
-		j++;
-		i++;
-	}
-	new[j] = '\0';
+	while (j >= i && (s[j] == ' ' || s[j] == '\n' || s[j] == '\t'))
+		j--;
+	len = j - i + 1;
+	new = ft_strsub(s, i, len);
 	return (new);
 }

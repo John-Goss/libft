@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 11:45:51 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 11:47:49 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 12:08:31 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 	int		i;
 
 	i = 0;
-	new = (char *)malloc(sizeof((size_t)size + 1));
+	new = (char *)malloc(sizeof(size_t) * size + 1);
 	if (new == NULL)
 		return (NULL);
 	else

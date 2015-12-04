@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 13:57:20 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 14:55:09 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/03 17:34:09 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	int i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && s1[i] == s2[i])
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);
 }

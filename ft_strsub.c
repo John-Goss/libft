@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 13:09:17 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 15:33:40 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 12:09:23 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	i= 0;
+	i = 0;
 	j = 0;
-	new = (char *)malloc(sizeof((size_t)len + 1));
+	new = (char *)malloc(sizeof(size_t) * len + 1);
 	if (new == NULL)
 		return (NULL);
 	while (i != start)
