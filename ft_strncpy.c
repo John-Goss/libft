@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:00:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/04 17:57:54 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/04 18:54:13 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 
 	i = 0;
 	src_len = ft_strlen(src);
-	while (src[i] && i < len)
+	while (src[i] && i < len - 1)
 	{
 		dst[i] = src[i];
 		i++;
