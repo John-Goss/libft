@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2015/12/04 13:57:28 by jle-quer         ###   ########.fr        #
+#    Updated: 2015/12/07 15:19:50 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,13 @@ SRC_NAME = ft_atoi.c \
 		  ft_strsub.c \
 		  ft_strtrim.c \
 		  ft_tolower.c \
-		  ft_toupper.c
+		  ft_toupper.c \
+		  ft_lstnew.c \
+		  ft_lstdelone.c \
+		  ft_lstdel.c \
+		  ft_lstadd.c \
+		  ft_lstiter.c \
+		  ft_lstmap.c
 
 NAME = libft.a
 

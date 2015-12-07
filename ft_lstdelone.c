@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 15:53:18 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/07 11:18:04 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/12/07 14:58:22 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/12/07 16:56:13 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t	n;
-	size_t	i;
-
-	n = ft_strlen(s2);
-	i = 0;
-	if (!s1 || !len)
-		return (NULL);
-	if (len < n)
-		return (NULL);
-	if (!s2)
-		return ((char *)s1);
-	while (s1[i] && i <= (len - n))
-	{
-		if (ft_strncmp(&s1[i], s2, n) == 0)
-			return ((char *)&s1[i]);
-		i++;
-	}
-	return (NULL);
+	del(*alst, 0);
+	free(*alst);
+	*alst = NULL;
 }

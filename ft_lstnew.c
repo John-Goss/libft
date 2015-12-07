@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 15:53:18 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/07 11:18:04 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/12/07 11:46:02 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/12/07 15:57:38 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t	n;
-	size_t	i;
+	t_list *new;
 
-	n = ft_strlen(s2);
-	i = 0;
-	if (!s1 || !len)
-		return (NULL);
-	if (len < n)
-		return (NULL);
-	if (!s2)
-		return ((char *)s1);
-	while (s1[i] && i <= (len - n))
+	if (content == NULL)
 	{
-		if (ft_strncmp(&s1[i], s2, n) == 0)
-			return ((char *)&s1[i]);
-		i++;
+		new = ft_memalloc(0);
+		new->content = NULL;
 	}
-	return (NULL);
+	else
+	{
+		new = ft_memalloc(content_size);
+		new->content = (void *)content;
+	}
+	new->next = NULL;
+	return (new);
 }
