@@ -201,18 +201,18 @@ int					main(void)
 	D_ADD_TEST(itoa);
 #define	D_STRTRIM
 	D_ADD_TEST(strtrim);
-//#define	D_LSTNEW
-//	D_ADD_TEST(lstnew);
-//#define	D_LSTDELONE
-//	D_ADD_TEST(lstdelone);
-//#define	D_LSTDEL
-//	D_ADD_TEST(lstdel);
-//#define	D_LSTADD
-//	D_ADD_TEST(lstadd);
-//#define	D_LSTITER
-//	D_ADD_TEST(lstiter);
-//#define D_LSTMAP
-//	D_ADD_TEST(lstmap);
+#define	D_LSTNEW
+	D_ADD_TEST(lstnew);
+#define	D_LSTDELONE
+	D_ADD_TEST(lstdelone);
+	#define	D_LSTDEL
+	D_ADD_TEST(lstdel);
+#define	D_LSTADD
+	D_ADD_TEST(lstadd);
+#define	D_LSTITER
+	D_ADD_TEST(lstiter);
+#define D_LSTMAP
+	D_ADD_TEST(lstmap);
 	while (test[i].set == true)
 	{
 		printf("Test [%s] : ", test[i].name);
@@ -271,7 +271,7 @@ t_list		*uf_testmap(t_list *elem)
 
 	content = ft_strdup((char *)(elem->content));
 	i = 0;
-	while (i < ft_strlen(content))
+	while ((size_t)i < ft_strlen(content))
 	{
 		content[i] += 1;
 		++i;
