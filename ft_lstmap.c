@@ -14,13 +14,27 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *new;
+	t_list	*tmp;
+	t_list	*new;
+	t_list	*res;
 
-	while (lst->next != NULL)
+	new = NULL;
+	while (lst)
 	{
-		new = (t_list *)malloc(sizeof(f)(lst));
-		lst->next = lst;
-		new->next = new;
+		tmp = f(lst);
+		if (!new)
+		{
+			new = tmp;
+			res = new;
+			new->next = NULL;
+		}
+		else
+		{
+			new->next = tmp;
+			tmp->next = NULL;
+			new = new->next;
+		}
+		lst = lst->next;
 	}
-	return (new);
+	return (res);
 }
