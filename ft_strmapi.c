@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 12:00:42 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 12:13:01 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/09 17:25:27 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*new;
-	unsigned char	i;
+	unsigned int	i;
 
 	if (!s || !f)
 		return (NULL);
