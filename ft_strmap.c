@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 11:45:01 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/03 11:45:06 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/11 11:25:56 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f) (char))
 	if (!s || !f)
 		return (NULL);
 	i = 0;
-	new = (char *)malloc(sizeof(ft_strlen((char *)s) + 1));
+	new = (char *)malloc(sizeof(char) * ft_strlen((char *)s) + 1);
 	if (new == NULL)
 		return (NULL);
 	while (s[i])

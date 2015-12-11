@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 12:24:02 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/04 13:29:47 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/11 11:52:06 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char		*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	else if (n == 0)
 		return (ft_strdup("0"));
-	str = (char *)malloc(sizeof(str) * i + 1);
+	str = (char *)malloc(sizeof(char) * i + 1);
 	if (str == NULL)
 		return (NULL);
 	str[i--] = '\0';

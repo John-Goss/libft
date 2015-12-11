@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 17:45:13 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 19:11:12 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/11 11:21:56 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = ((unsigned char)c);
 	cpt = 0;
+	if (s == NULL)
+		return (NULL);
 	if (s && n)
 	{
 		while (cpt < n)

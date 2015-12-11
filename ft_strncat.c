@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:47:45 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/11/30 17:09:48 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/11 11:03:50 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	cpt = 0;
 	while (s2[i] && cpt < n)
 	{
-		((char *)s1)[j] = ((char *)s2)[i];
+		s1[j] = ((char *)s2)[i];
 		i++;
 		j++;
 		cpt++;
 	}
+	s1[j] = '\0';
 	return (s1);
 }
