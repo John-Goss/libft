@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 17:45:13 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/14 15:00:31 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/12/14 14:23:42 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/12/14 14:42:27 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_isspace(int c)
 {
-	unsigned char	i;
-	size_t			cpt;
-
-	i = ((unsigned char)c);
-	cpt = 0;
-	while (cpt < n)
-	{
-		if (((unsigned char *)s)[cpt] == i)
-			return (((void *)s) + cpt);
-		cpt++;
-	}
-	return (NULL);
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+			|| c == ' ');
 }

@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2015/12/11 16:10:17 by jle-quer         ###   ########.fr        #
+#    Updated: 2015/12/14 15:29:56 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,9 @@ SRC_NAME =	ft_atoi.c \
 			ft_lstadd.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
-			ft_words.c
+			ft_words.c \
+			ft_isspace.c \
+			ft_count.c
 
 NAME = libft.a
 

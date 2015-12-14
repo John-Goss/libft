@@ -6,30 +6,11 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 12:24:02 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/11 11:52:06 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/14 15:29:10 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_count(int n)
-{
-	int i;
-
-	i = 0;
-	if (n < 0)
-	{
-		i++	;
-		n = -n;
-	}
-	while (n >= 10)
-	{
-		n = n / 10;
-		i++;
-	}
-	i++;
-	return (i);
-}
 
 char		*ft_itoa(int n)
 {

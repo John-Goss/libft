@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 15:53:18 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/07 11:18:04 by jle-quer         ###   ########.fr       */
+/*   Updated: 2015/12/14 15:06:43 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	n = ft_strlen(s2);
 	i = 0;
-	if (!s1 || !len)
-		return (NULL);
 	if (len < n)
 		return (NULL);
 	if (!s2)

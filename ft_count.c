@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_count.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 17:45:13 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/14 15:00:31 by jle-quer         ###   ########.fr       */
+/*   Created: 2015/12/14 15:25:45 by jle-quer          #+#    #+#             */
+/*   Updated: 2015/12/14 15:27:48 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_count(int n)
 {
-	unsigned char	i;
-	size_t			cpt;
+	int i;
 
-	i = ((unsigned char)c);
-	cpt = 0;
-	while (cpt < n)
+	i = 0;
+	if (n < 0)
 	{
-		if (((unsigned char *)s)[cpt] == i)
-			return (((void *)s) + cpt);
-		cpt++;
+		i++;
+		n = -n;
 	}
-	return (NULL);
+	while (n >= 10)
+	{
+		n = n / 10;
+		i++;
+	}
+	i++;
+	return (i);
 }
