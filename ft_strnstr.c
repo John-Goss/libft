@@ -14,20 +14,25 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	size_t	n;
+	size_t	s2_len;
 	size_t	i;
+	char	*ptr;
 
-	n = ft_strlen(s2);
-	i = 0;
-	if (len < n)
+	s2_len = ft_strlen(s2);
+	ptr = (char *)s1;
+	if (ft_strlen(ptr) < s2_len)
 		return (NULL);
 	if (!s2)
-		return ((char *)s1);
-	while (s1[i] && i <= (len - n))
+		return (ptr);
+	if (s2_len > len)
+		return (NULL);
+	i = len - s2_len + 1;
+	while (i > 0)
 	{
-		if (ft_strncmp(&s1[i], s2, n) == 0)
-			return ((char *)&s1[i]);
-		i++;
+		if (ft_strncmp(ptr, s2, s2_len) == 0)
+			return (ptr);
+		ptr++;
+		i--;
 	}
 	return (NULL);
 }

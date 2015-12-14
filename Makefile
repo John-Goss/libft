@@ -70,7 +70,9 @@ SRC_NAME =	ft_atoi.c \
 			ft_lstmap.c \
 			ft_words.c \
 			ft_isspace.c \
-			ft_count.c
+			ft_count.c \
+			ft_islower.c \
+			ft_isupper.c
 
 NAME = libft.a
 
