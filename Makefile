@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2015/12/14 15:29:56 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/01/11 12:32:57 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,8 @@ SRC_NAME =	ft_atoi.c \
 			ft_isspace.c \
 			ft_count.c \
 			ft_islower.c \
-			ft_isupper.c
+			ft_isupper.c \
+			ft_strchr_index.c
 
 NAME = libft.a
 

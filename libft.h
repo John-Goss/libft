@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:37:11 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/14 15:29:15 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/01/11 12:32:12 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ int					ft_isspace(int c);
 int					ft_count(int c);
 int					ft_islower(int c);
 int					ft_isupper(int c);
+int					ft_strchr_index(const char *str, char c);
 
 #endif
