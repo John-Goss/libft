@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2016/01/11 12:32:57 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/01/22 15:38:19 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,7 @@ $(NAME): $(OBJET)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc $(FLAGS) -c $<
+	gcc $(FLAGS) -I ./includes -c $<
 
 clean:
 	rm -f $(OBJET)
