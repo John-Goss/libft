@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2016/01/22 15:38:19 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/03/14 13:09:46 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,36 @@ SRC_NAME =	ft_atoi.c \
 			ft_count.c \
 			ft_islower.c \
 			ft_isupper.c \
-			ft_strchr_index.c
+			ft_strchr_index.c \
+			ft_count_wchar.c \
+			ft_itoa_base.c \
+			ft_power.c \
+			ft_putint.c \
+			ft_putwchar.c \
+			ft_putwstr.c \
+			ft_printf.c \
+			check_display_block_d.c \
+			check_display_block_o.c \
+			check_display_block_p.c \
+			check_display_block_u.c \
+			check_display_block_x.c \
+			check_format.c \
+			check_format_2.c \
+			display_block.c \
+			set_c.c \
+			set_d.c \
+			set_format.c \
+			set_hex.c \
+			set_octal.c \
+			set_tag.c \
+			set_tag.c \
+			set_p.c \
+			set_s.c \
+			set_u.c \
+			set_wchar_s.c \
+			tools.c \
+			tools2.c \
+			set_d_norm.c
 
 NAME = libft.a
 

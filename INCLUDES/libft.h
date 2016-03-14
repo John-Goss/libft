@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:37:11 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/14 12:44:06 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 13:09:48 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,13 @@ int					ft_count(long long c);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_strchr_index(const char *str, char c);
+int					ft_count_wchar(unsigned int wchar);
+char				*ft_itoa_base(intmax_t nbr, int base);
+char				*u_itoa_base(uintmax_t nbr, int base);
+long				ft_power(long nb, int i);
+void				ft_putint(int c);
+void				ft_putwchar(wchar_t c);
+void				ft_putwstr(wchar_t *str);
+int					ft_printf(const char *format, ...);
 
 #endif
