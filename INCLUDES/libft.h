@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:37:11 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/01/22 15:40:04 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 12:44:06 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 size_t				ft_words(char const *str, char c);
 int					ft_isspace(int c);
-int					ft_count(int c);
+int					ft_count(long long c);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_strchr_index(const char *str, char c);

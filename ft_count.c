@@ -6,13 +6,13 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/14 15:25:45 by jle-quer          #+#    #+#             */
-/*   Updated: 2015/12/14 15:27:48 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 12:42:49 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int n)
+int	ft_count(long long n)
 {
 	int i;
 
