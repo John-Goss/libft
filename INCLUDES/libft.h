@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:37:11 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/14 13:09:48 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 14:53:04 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ void				ft_putint(int c);
 void				ft_putwchar(wchar_t c);
 void				ft_putwstr(wchar_t *str);
 int					ft_printf(const char *format, ...);
+int					ft_count_base(unsigned long n, int base);
 
 #endif

@@ -6,10 +6,11 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 11:10:52 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/10 19:58:34 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 14:47:15 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "ft_printf.h"
 
 void	init_struct(t_struct *form)

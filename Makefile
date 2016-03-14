@@ -6,9 +6,11 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2016/03/14 13:09:46 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/03/14 14:53:12 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+vpath %.c ./ ./FT_PRINTF/
 
 SRC_NAME =	ft_atoi.c \
 			ft_bzero.c \
@@ -102,7 +104,8 @@ SRC_NAME =	ft_atoi.c \
 			set_wchar_s.c \
 			tools.c \
 			tools2.c \
-			set_d_norm.c
+			set_d_norm.c \
+			get_next_line.c
 
 NAME = libft.a
 
@@ -117,7 +120,7 @@ $(NAME): $(OBJET)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc $(FLAGS) -I ./includes -c $<
+	gcc $(FLAGS) -I./INCLUDES -c $<
 
 clean:
 	rm -f $(OBJET)
@@ -126,3 +129,7 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+proper:
+	make
+	make clean

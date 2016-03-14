@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/29 12:30:53 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/14 12:58:45 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 14:22:17 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,25 @@ static char	*ui_to_bits(unsigned int u)
 	return (bits);
 }
 
+static char	**uni_mask_1(char *bits, char *mask, size_t bits_len, int mask_len)
+{
+	char	**tmp;
+
+	while (mask_len >= 0)
+	{
+		if (mask[mask_len] == 'x' && bits[bits_len])
+		{
+			mask[mask_len] = bits[bits_len];
+			bits_len--;
+		}
+		else if (mask[mask_len] == 'x' && !bits[bits_len])
+			mask[mask_len] = '0';
+		mask_len--;
+	}
+	tmp = ft_strsplit(mask, ' ');
+	return (tmp);
+}
+
 static char	**uni_mask(char *bits)
 {
 	char	*mask;
@@ -53,25 +72,6 @@ static char	**uni_mask(char *bits)
 	mask_len = ft_strlen(mask) - 1;
 	bits_len = 31;
 	return (uni_mask_1(bits, mask, bits_len, mask_len));
-}
-
-static char	**uni_mask_1(char *bits, char *mask, size_t bits_len, int mask_len)
-{
-	char	**tmp;
-
-	while (mask_len >= 0)
-	{
-		if (mask[mask_len] == 'x' && bits[bits_len])
-		{
-			mask[mask_len] = bits[bits_len];
-			bits_len--;
-		}
-		else if (mask[mask_len] == 'x' && !bits[bits_len])
-			mask[mask_len] = '0';
-		mask_len--;
-	}
-	tmp = ft_strsplit(mask, ' ');
-	return (tmp);
 }
 
 static void	print_oct(char *mask)

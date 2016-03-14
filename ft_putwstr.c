@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 12:31:33 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/14 13:01:40 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 14:23:26 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putwstr(wchar_t *str)
 
 	while (*str)
 	{
-		ft_putwchar(str);
+		ft_putwchar(*str);
 		str++;
 	}
 }

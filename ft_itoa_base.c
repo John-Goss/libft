@@ -6,12 +6,12 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/27 05:25:19 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/08 16:20:50 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 14:46:36 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "ft_printf.h"
-#include <limits.h>
 
 char	*u_itoa_base(uintmax_t nbr, int base)
 {

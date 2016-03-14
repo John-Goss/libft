@@ -1,46 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count.c                                         :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/14 15:25:45 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/14 14:52:11 by jle-quer         ###   ########.fr       */
+/*   Created: 2016/01/07 18:24:44 by jle-quer          #+#    #+#             */
+/*   Updated: 2016/03/14 14:40:42 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 32
 
-int	ft_count(long long n)
+# include "libft.h"
+# include <sys/types.h>
+# include <sys/uio.h>
+
+typedef struct		s_struct
 {
-	int i;
+	int				fd;
+	char			buf[BUFF_SIZE + 1];
+	char			*save_buf;
+	struct s_struct	*next;
+}					t_struct;
 
-	i = 0;
-	if (n < 0)
-	{
-		i++;
-		n = -n;
-	}
-	while (n >= 10)
-	{
-		n = n / 10;
-		i++;
-	}
-	i++;
-	return (i);
-}
+int					get_next_line(int const fd, char **line);
 
-int	ft_count_base(unsigned long n, int base)
-{
-	int	i;
-
-	i = 0;
-	while (n >= (unsigned int)base)
-	{
-		n = n / base;
-		i++;
-	}
-	i++;
-	return (i);
-}
+#endif
