@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2016/03/14 14:53:12 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/03/14 15:07:12 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,22 +114,26 @@ FLAGS = -Wall -Werror -Wextra
 OBJET = $(SRC_NAME:.c=.o)
 
 all: $(NAME)
+	@echo "Make In Progress"
+	@echo "Make Done."
 
 $(NAME): $(OBJET)
-	ar rc $(NAME) $(OBJET)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJET)
+	@ranlib $(NAME)
 
 %.o: %.c
-	gcc $(FLAGS) -I./INCLUDES -c $<
+	@gcc $(FLAGS) -I./INCLUDES -c $<
 
 clean:
-	rm -f $(OBJET)
+	@echo "Clean In Progress"
+	@rm -f $(OBJET)
+	@echo "Clean Done."
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
 proper:
-	make
-	make clean
+	@make
+	@make clean
