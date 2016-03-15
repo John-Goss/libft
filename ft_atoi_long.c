@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_long.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 12:19:02 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/15 15:37:42 by jle-quer         ###   ########.fr       */
+/*   Created: 2016/03/15 15:47:28 by jle-quer          #+#    #+#             */
+/*   Updated: 2016/03/15 15:47:59 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	ft_atoi(const char *str)
+long long	ft_atoi_long(const char *str)
 {
 	int			i;
 	long long	res;
