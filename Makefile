@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2016/03/14 15:07:12 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/03/15 15:35:32 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,7 +105,8 @@ SRC_NAME =	ft_atoi.c \
 			tools.c \
 			tools2.c \
 			set_d_norm.c \
-			get_next_line.c
+			get_next_line.c \
+			ft_atoi_long.c
 
 NAME = libft.a
 

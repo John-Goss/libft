@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/29 12:30:53 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/03/14 14:22:17 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/03/14 15:19:34 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ static void	print_oct(char *mask)
 	ft_putint(value);
 }
 
-void	ft_putwchar(wchar_t c)
+void		ft_putwchar(wchar_t c)
 {
 	char	*bits;
 	char	**mask;
