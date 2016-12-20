@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:37:11 by jle-quer          #+#    #+#             */
-/*   Updated: 2016/06/07 17:50:38 by jle-quer         ###   ########.fr       */
+/*   Updated: 2016/09/29 13:02:49 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ void				ft_lstpushfront(t_list **blst, void const *content,
 					size_t content_size);
 int					ft_isint(char *str);
 char				*ft_strndup(const char *s1, size_t length);
+char				*get_str_addr(char *str);
 
 #endif

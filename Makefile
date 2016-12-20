@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 14:39:27 by jle-quer          #+#    #+#              #
-#    Updated: 2016/06/07 17:51:01 by jle-quer         ###   ########.fr        #
+#    Updated: 2016/09/29 13:02:04 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,8 @@ SRC_NAME =	ft_atoi.c \
 			ft_lstpushback.c \
 			ft_lstpushfront.c \
 			ft_isint.c \
-			ft_strndup.c
+			ft_strndup.c \
+			get_str_addr.c
 
 NAME = libft.a
 
