@@ -142,3 +142,5 @@ re: fclean all
 proper:
 	@make
 	@make clean
+
+.PHONY: all, clean, fclean, re
